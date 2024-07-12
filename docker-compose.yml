@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  myapp:
+    image: myapp
+    build: .
+    secrets:
+      - password
+      - DB_NAME
+
+secrets:
+  password:
+    external: true
+  DB_NAME:
+    external: true
